@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 export default function Navbar(props) {
- 
+
 
     return (
         <div className="navbar">
@@ -17,7 +17,7 @@ export default function Navbar(props) {
                 <input type="search" results="5" autosave="some_unique_value" placeholder="Search"  ></input>
                 <button id="searchBtn" type="submit" ><i className="fa fa-search"></i></button>
             </div>
-        </div >
+        </div>
 
 
     )
