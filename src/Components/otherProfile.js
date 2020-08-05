@@ -32,7 +32,7 @@ function OtherProfile() {
       
         
 					<div className="img-holder">
-						<img  src = {avatar.src} alt="" id="img" className="img" />
+						<img  src = {user.avatar} alt="" id="img" className="img" />
 				</div>
 
         
