@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import LandingPage from './Components/LandingPage.js';
+import RegisterForm from './Components/RegisterForm';
+import './style/common.css';
+//import LogIn from './Components/LogIn';
+//import Routing from './Routing';
+import Profile from './Components/profile';
+//import Profile from './Components/otherProfile';
+
+import Routing from './Routing';
+import MainPage from './Components/MainPage'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Routing />
+    {/* <Profile/> */}
+    {/* <MainPage/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
