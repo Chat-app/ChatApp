@@ -10,8 +10,8 @@ const userSchema = new mongoose.Schema({
     bio: {
         type: String
     },
-    avatar:{
-        type:Object
+    avatar: {
+        type: String, default: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
     },
     listOfFriends: {
         type: Array
@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
 },
     { timestamps: true })
 
-userSchema.index({"fullName":"text"})
-let user = mongoose.model('user',userSchema);
+userSchema.index({ "fullName": "text" })
+let user = mongoose.model('user', userSchema);
 
 module.exports = user
