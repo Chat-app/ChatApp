@@ -25,7 +25,7 @@ function Profile() {
       
       useEffect(() => {
         // Your code here
-        setAvatar({src:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'});
+       // setAvatar({src:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'});
         axios({
             method: 'get',
             url: 'http://localhost:5000/api/auth/me',
@@ -63,7 +63,7 @@ function Profile() {
         <div className='profile-container'>
         
 					<div className="img-holder">
-						<img src={avatar.src} alt="" id="img" className="img" />
+						<img alt = "avatar" src={user.avatar} alt="" id="img" className="img" />
 					<input type="file" accept="image/*" name="image-upload" id="input" onChange={imageHandler} />
 				</div>
 

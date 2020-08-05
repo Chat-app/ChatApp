@@ -1,38 +1,39 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    fullName:{
-        type:String
+    fullName: {
+        type: String
     },
-    Id:{
-        type:Number
+    Id: {
+        type: Number
     },
-    bio:{
-        type:String
+    bio: {
+        type: String
     },
     avatar:{
-        type:Object
+        type:String,
+        default:"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
     },
-    listOfFriends:{
-        type:Array
+    listOfFriends: {
+        type: Array
     },
-    listOfChatRoom:{
-        type:Array
+    listOfChatRoom: {
+        type: Array
     },
-    password:{
-        type:String
+    password: {
+        type: String
     },
-    email:{
-        type:String
+    email: {
+        type: String
     },
-    numberOfUnRead:{
-        type:Number
+    numberOfUnRead: {
+        type: Number
     },
-    gender:{
-        type:String
+    gender: {
+        type: String
     }
 },
-    {timestamps:true})
+    { timestamps: true })
 
 userSchema.index({"fullName":"text"})
 let user = mongoose.model('user',userSchema);
