@@ -9,7 +9,7 @@ class WelcomePanel extends Component {
             <div className='container2' style={containerStyle}>
                 <div className='main' style={mainStyle} >
 
-                    <div className='imgContainer'> <img style={avatarStyle} src={require('../assets/avatar.png')} alt="Avatar" /></div>
+                    <div className='imgContainer'> <img style={avatarStyle} src={his.props.user.avatar} alt="Avatar" /></div>
                     <div className='textBoxContainer' style={textBoxContainerStyle} > {this.props.user.fullName}
                         {/* <input style={textBoxStyle} type='text' placeholder='name' /> */}
                         </div>

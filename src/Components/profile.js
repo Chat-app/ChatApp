@@ -63,7 +63,7 @@ function Profile() {
         <div className='profile-container'>
         
 					<div className="img-holder">
-						<img src={avatar.src} alt="" id="img" className="img" />
+						<img alt = "avatar" src={user.avatar} alt="" id="img" className="img" />
 					<input type="file" accept="image/*" name="image-upload" id="input" onChange={imageHandler} />
 				</div>
 
