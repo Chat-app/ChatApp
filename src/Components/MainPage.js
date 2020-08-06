@@ -30,7 +30,7 @@ function MainPage(){
                 <div className="left-panel">
                     <div style={border}>
                     {/* Add navBar Below this line ONLY and put its className ="navbar" */}
-                    <Navbar avatar={require('../assets/avatar.png')} />
+                    <Navbar  user={userData} />
                     </div>
 
                     {/*  add two buttons for New Message and New Group */}
