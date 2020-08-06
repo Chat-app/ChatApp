@@ -7,12 +7,9 @@ import axios from 'axios';
 function OtherProfile() {
   const { authTokens } = useAuth();
   const [user, setUserData] = useState("");
-  const [avatar, setAvatar] = useState("");
-  //const [userBio, setBio] = useState("");
-   
+
   useEffect(() => {
     // Your code here
-    setAvatar({src:avatar.src});
     axios({
         method: 'get',
         url: 'http://localhost:5000/api/auth/me',
@@ -41,7 +38,7 @@ function OtherProfile() {
         </div>
 
         <div>
-       <button class = "button button1">Add {user.fullName} </button>
+       <button class = "button button1">Follow {user.fullName} </button>
      </div>
         
       <div class="form-group">

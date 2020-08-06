@@ -16,7 +16,7 @@ function Profile() {
         
         reader.onload = function () {
           if (reader.readyState === 2) {
-            setAvatar({src:reader.result});
+            setAvatar(reader.result);
           }
         };
         reader.readAsDataURL(e.target.files[0])
@@ -25,7 +25,7 @@ function Profile() {
       
       useEffect(() => {
         // Your code here
-       // setAvatar({src:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'});
+
         axios({
             method: 'get',
             url: 'http://localhost:5000/api/auth/me',
@@ -48,7 +48,7 @@ function Profile() {
             userID:user._id,
             bio:userBio,
             Id:12,
-            avatar:avatar.src
+            avatar:avatar
           }
       }).then(res => {
           console.log("error Khader")
