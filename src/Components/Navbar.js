@@ -12,7 +12,7 @@ export default function Navbar(props) {
     return (
         <div className="navbar">
 
-            <img id="navAvatar" style={avatarStyle} src={props.avatar} alt="Avatar" onClick={() => window.open("./login", "_blank")} />
+            <img id="navAvatar" style={avatarStyle} src={props.user.avatar} alt="Avatar" onClick={() => window.open("./login", "_blank")} />
             <div className="search-container">
                 <input type="search" results="5" autosave="some_unique_value" placeholder="Search"  ></input>
                 <button id="searchBtn" type="submit" ><i className="fa fa-search"></i></button>
@@ -23,5 +23,7 @@ export default function Navbar(props) {
     )
 }
 const avatarStyle = {
-    width: '50px'
+    width: '50px',
+    height:'50px',
+    borderRadius:'100%'
 }
